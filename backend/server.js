@@ -19,7 +19,8 @@ app.use(express.static(path.join(__dirname, "build")));
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
 app.use(cors({
-        origin: "https://mern-task-app-6bkv.onrender.com"
+        origin: "https://mern-task-app-6bkv.onrender.com",
+        allowedHeaders: ['Content-Type', 'Authorization']
     }
 ))
 app.options('*', cors())
