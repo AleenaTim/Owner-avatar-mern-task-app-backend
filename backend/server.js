@@ -9,7 +9,9 @@ const app = express();
 
 // Connect to MongoDB
 connectDB();
+const path = require("path");
 
+app.use(express.static(path.join(__dirname, "build")));
 // Middleware
 app.use(cors({
   origin: 'https://mern-task-app-6bkv.onrender.com/', // Replace with your frontend's URL

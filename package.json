@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "proxy": "https://mern-task-app-api-l3bi.onrender.com/",
   "scripts": {
     "start": "node backend/server.js",
     "backend": "nodemon backend/server.js",
+    "prod": "NODE_ENV=production nodemon server.js",
     "frontend": "npm start --prefix frontend",
     "both": "concurrently \"npm run backend\" \"npm run frontend\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
