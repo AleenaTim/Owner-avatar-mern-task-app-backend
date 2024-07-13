@@ -1,11 +1,9 @@
+require('dotenv').config(); // Load environment variables at the top
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./connectDB');
 const taskRoutes = require('./taskRoute');
-
-// Load environment variables from .env file
-require('dotenv').config();
 
 const app = express();
 
@@ -19,5 +17,5 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/tasks', taskRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
