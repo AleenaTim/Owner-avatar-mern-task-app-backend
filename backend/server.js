@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const connectDB = require('./config/connectDB');
+const connectDB = require('./connectDB');
 const taskRoutes = require('./taskRoute');
 
 // Load environment variables from .env file
