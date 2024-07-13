@@ -13,11 +13,16 @@ const path = require("path");
 
 app.use(express.static(path.join(__dirname, "build")));
 // Middleware
+// app.use(cors({
+//   origin: 'https://mern-task-app-6bkv.onrender.com/', // Replace with your frontend's URL
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 app.use(cors({
-  origin: 'https://mern-task-app-6bkv.onrender.com/', // Replace with your frontend's URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+        origin: "https://mern-task-app-6bkv.onrender.com"
+    }
+))
+app.options('*', cors())
 app.use(bodyParser.json());
 
 // Routes
