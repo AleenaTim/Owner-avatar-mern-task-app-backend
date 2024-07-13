@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "proxy": "https://mern-task-app-api-l3bi.onrender.com/",
+  "proxy": "https://mern-task-app-6bkv.onrender.com/",
   "scripts": {
     "start": "node backend/server.js",
     "backend": "nodemon backend/server.js",
