@@ -11,7 +11,8 @@ const app = express();
 connectDB();
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "build")));
+
+// app.use(express.static(path.join(__dirname, "build")));
 // Middleware
 // app.use(cors({
 //   origin: 'https://mern-task-app-6bkv.onrender.com/', // Replace with your frontend's URL
@@ -19,9 +20,11 @@ app.use(express.static(path.join(__dirname, "build")));
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
 app.use(cors({
-        origin: "https://mern-task-app-6bkv.onrender.com",
-        allowedHeaders: ['Content-Type', 'Authorization']
-    }
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
 ))
 app.options('*', cors())
 app.use(bodyParser.json());
