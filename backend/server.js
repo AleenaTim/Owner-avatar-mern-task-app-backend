@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const connectDB = require('./connectDB');
+const connectDB = require('./config/connectDB');
 const taskRoutes = require('./taskRoute');
-
-const app = express();
 
 // Load environment variables from .env file
 require('dotenv').config();
+
+const app = express();
 
 // Connect to MongoDB
 connectDB();
